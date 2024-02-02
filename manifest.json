@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "SoundCloud Sort by Track Timestamp",
+    "version": "1.0",
+    "description": "Sorts comments on SoundCloud by track timestamp.",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://soundcloud.com/*"
+            ],
+            "js": [
+                "sort-by-track-timestamp.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
